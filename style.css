@@ -1,0 +1,25 @@
+*, *::before, *::after {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, lightgreen, lightblue);
+    justify-content: center;
+    position: relative;
+}
+
+.container {
+    margin-top: 20px;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.delete-item.fs-3 {
+    position: relative;
+    right: -50%;
+    clear: right;
+}
+
