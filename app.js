@@ -34,25 +34,25 @@ function addTask(e){
     // Will still add a blank task even after the alert. This will be fixed
     if(taskInput.value === '') {
         alert('Add a task')
+    } else {
+        // Create li element
+        const li = document.createElement('li');
+        // Add class
+        li.className = 'collection-item border border-dark p-3 flex-end';
+        // Create text node and append to li
+        li.appendChild(document.createTextNode(taskInput.value));
+        // Create new link element
+        const link = document.createElement('a');
+        // Add class
+        link.className = 'delete-item fs-3';
+        // Add icon html
+        link.innerHTML = '<i class="bi bi-x"></li>';
+        // Append the link to li
+        li.appendChild(link);
+
+        // Append li to ul
+        taskList.appendChild(li);
     }
-
-    // Create li element
-    const li = document.createElement('li');
-    // Add class
-    li.className = 'collection-item border border-dark p-3 flex-end';
-    // Create text node and append to li
-    li.appendChild(document.createTextNode(taskInput.value));
-    // Create new link element
-    const link = document.createElement('a');
-    // Add class
-    link.className = 'delete-item fs-3';
-    // Add icon html
-    link.innerHTML = '<i class="bi bi-x"></li>';
-    // Append the link to li
-    li.appendChild(link);
-
-    // Append li to ul
-    taskList.appendChild(li);
 
     e.preventDefault();
 }
